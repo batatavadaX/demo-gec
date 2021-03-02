@@ -1,0 +1,13 @@
+name: gec
+services:
+  ic:
+    image: 'okteto.dev/ic:latest'
+    build: .
+    replicas: 1
+    ports:
+      - 6969
+    resources:
+      cpu: 2
+      memory: 4Gi
+    environment:
+      - environment=development
