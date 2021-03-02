@@ -1,8 +1,7 @@
 #button {
-	padding: 100px;
+	padding: 50px;
 	width: 12em;
-	border: 1px limegreen;
-	background: #ffff00;
+	background: limegreen;
 	border-radius: 100px;
 }
 
@@ -53,37 +52,9 @@ nav .container {
 }
 
 .title {
-	color: orange;
+	color: limegreen;
 	margin: 0;
 }
-
-.toggler-container {
-	margin-left: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.toggler {
-	width: 60px;
-	margin: 0 10px;
-	background: #222;
-	height: 100%;
-	border-radius: 100px;
-	position: relative;
-	padding: 5px;
-	transition: all 0.3s ease-in-out;
-	cursor: pointer;
-}
-
-.circle {
-	background-color: orange;
-	height: 20px;
-	width: 20px;
-	border-radius: 100px;
-	transition: all 0.3s ease-in-out
-}
-
 img {
 	display: block;
 	margin: 20px auto;
