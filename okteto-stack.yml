@@ -1,7 +1,7 @@
 name: gec
 services:
   ic:
-    image: 'okteto.dev/ic:latest'
+    image: 'okteto.dev/ic'
     build: .
     replicas: 1
     ports:
