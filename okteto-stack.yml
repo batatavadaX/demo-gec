@@ -2,7 +2,7 @@ name: students
 services:
   ic:
     public: true
-    image: 'okteto.dev/demo-gec'
+    image: 'okteto.dev/students'
     build: .
     replicas: 1
     ports:
