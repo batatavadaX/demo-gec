@@ -1,16 +1,15 @@
 name: gec
 services:
   ic:
-    image: 'okteto.dev/ic:latest'
-    build: .
-    replicas: 1
+    public: true
+    image: okteto.dev/web
+    build: web
+    replicas: 2
     ports:
-      - 6969
+      - 8080
     resources:
       cpu: 2
-      memory: 4Gi
+      memory: 2Gi
       storage: 3Gi
     volumes:
       - /data
-    environment:
-      - environment=development
