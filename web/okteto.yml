@@ -1,7 +1,0 @@
-name: vote
-workdir: /src
-command: ["bash", "./Creatus-est"]
-environment:
-  - FLASK_ENV=development
-forward:
-  - 6969:6969
