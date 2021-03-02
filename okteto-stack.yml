@@ -1,8 +1,8 @@
 name: gec
 services:
   ic:
-    image: okteto.dev/web
-    build: web
+    image: okteto.dev/ic
+    build: .
     replicas: 1
     ports:
       - 6969
