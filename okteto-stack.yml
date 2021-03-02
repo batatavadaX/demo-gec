@@ -1,12 +1,16 @@
-name: gec
+name: students
 services:
   ic:
-    public: true
-    image: okteto.dev/web
+    image: 'okteto.dev/demo-gec'
     build: .
-    replicas: 2
+    replicas: 1
     ports:
-      - 8080
+      - 6969
     resources:
       cpu: 2
-      memory: 2Gi
+      memory: 4Gi
+      storage: 2Gi
+    volumes:
+      - /data
+    environment:
+      - environment=development
