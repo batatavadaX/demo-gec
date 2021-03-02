@@ -10,6 +10,3 @@ services:
     resources:
       cpu: 2
       memory: 2Gi
-      storage: 3Gi
-    volumes:
-      - /data
