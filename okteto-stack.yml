@@ -1,6 +1,7 @@
 name: students
 services:
   ic:
+    public: true
     image: 'okteto.dev/demo-gec'
     build: .
     replicas: 1
