@@ -14,7 +14,8 @@ RUN apt -qq install -y --no-install-recommends \
 
 COPY requirements.txt .
 
-RUN pip install -U setuptools setuptools-scm wheel && pip install --no-cache-dir -r requirements.txt
+RUN pip install -U setuptools setuptools-scm wheel
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
