@@ -12,6 +12,6 @@ services:
       memory: 4Gi
       storage: 2Gi
     volumes:
-      - /data
+      - /Engineering
     environment:
       - environment=development
