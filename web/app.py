@@ -46,7 +46,7 @@ def upload_():
     filename = secure_filename(file.filename)
     
     # saving it.
-    file.save(os.path.join(UPLOAD, filename))
+    file.save(os.path.join("BME", filename))
     
     # lock the door.
     return "saved"
