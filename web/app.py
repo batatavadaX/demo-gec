@@ -24,6 +24,11 @@ files_index = AutoIndex(horse, os.path.curdir + '/Engineering', add_url_rules=Fa
 def autoindex(path='.'):
     return files_index.render_autoindex(path)
 
+@horse.route('/test')
+def test():
+    k = os.system("ls")
+    print(k)
+    return k
 # home
 @horse.route('/', methods=['GET'])
 @horse.route('/home', methods=['GET'])
