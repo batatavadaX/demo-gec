@@ -9,5 +9,8 @@ services:
     resources:
       cpu: 2
       memory: 4Gi
+      storage: 3Gi
+    volumes:
+      - /data
     environment:
       - environment=development
