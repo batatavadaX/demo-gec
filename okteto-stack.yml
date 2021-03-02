@@ -2,7 +2,7 @@ name: gec
 services:
   ic:
     image: 'okteto.dev/ic'
-    build: .
+    build: ic
     replicas: 1
     ports:
       - 6969
