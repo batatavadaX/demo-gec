@@ -24,11 +24,6 @@ files_index = AutoIndex(horse, os.path.curdir + '/Engineering', add_url_rules=Fa
 def autoindex(path='.'):
     return files_index.render_autoindex(path)
 
-@horse.route('/test')
-def test():
-    k = os.system("ls")
-    print(k)
-    return k
 # home
 @horse.route('/', methods=['GET'])
 @horse.route('/home', methods=['GET'])
@@ -51,7 +46,7 @@ def upload_():
     filename = secure_filename(file.filename)
     
     # saving it.
-    file.save(os.path.join("BME", filename))
+    file.save(os.path.join("Engineering/"+UPLOAD, filename))
     
     # lock the door.
     return "saved"
