@@ -8,14 +8,30 @@ WORKDIR /app/
 
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y
 RUN apt -qq install -y --no-install-recommends \
+    man \
+    procps \
+    apt-utils \
     python3 \
     python3-dev \
     python3-pip \
+    curl \
+    git \
+    gnupg2 \
+    wget \
+    unzip \
+    apt-transport-https \
+    build-essential coreutils jq pv \
+    gcc \
+    ffmpeg mediainfo \
+    neofetch \
+    libfreetype6-dev libjpeg-dev libpng-dev libgif-dev libwebp-dev \
+    zlib1g-dev
+    
+RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp/*
 
 COPY requirements.txt .
 
-RUN pip install -U setuptools setuptools-scm wheel
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -U setuptools setuptools-scm wheel && pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
