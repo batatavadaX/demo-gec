@@ -1,0 +1,48 @@
+#! bin/bash
+
+# exit code precautions.
+set -e
+
+# logo :D
+logo () {
+printf "
+───────────────▄▄───▐█
+───▄▄▄───▄██▄──█▀───█─▄
+─▄██▀█▌─██▄▄──▐█▀▄─▐█▀
+▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌
+▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄
+"
+}
+
+# directory variables 
+DIR='Engineering'
+ES='ES' 
+BME='BME' 
+BEE='BEE' 
+PPS='PPS'
+MATHS='MATHS' 
+
+# init directories
+mkdir -p "$DIR/$BME" \
+         "$DIR/$BEE" \
+         "$DIR/$ES" \
+         "$DIR/$MATHS" \
+         "$DIR/$PPS"
+
+# i dont know why i am doing this.
+if [ ! -d "$DIR" ]; then
+  printf "Error 1 :: Directory Error"
+else [ -d "$DIR" ];
+  printf "Scanning $DIR \n\n"
+  printf "%s\n" "$DIR"/*/
+fi
+
+# starting main application.
+logo
+
+chmod 777 main.py
+python3 main.py
+printf "Web Process Running."
+
+# stress relief.
+sleep 5
