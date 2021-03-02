@@ -11,7 +11,6 @@ RUN apt -qq install -y --no-install-recommends \
     python3 \
     python3-dev \
     python3-pip \
-RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp/*
 
 COPY requirements.txt .
 
