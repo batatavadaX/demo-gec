@@ -17,7 +17,7 @@ KEY = os.environ.get("PRIVATE_KEY", "1234")
 
 
 # indexing files feom main folder
-files_index = AutoIndex(app, os.path.curdir + '/Engineering', add_url_rules=False)
+files_index = AutoIndex(horse, os.path.curdir + '/Engineering', add_url_rules=False)
 # Custom indexing
 @app.route('/files')
 @app.route('/files/<path:path>')
