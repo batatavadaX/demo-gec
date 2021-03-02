@@ -3,7 +3,7 @@ services:
   ic:
     public: true
     image: okteto.dev/web
-    build: web
+    build: .
     replicas: 2
     ports:
       - 8080
