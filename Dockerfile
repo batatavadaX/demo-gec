@@ -1,12 +1,29 @@
-FROM python:3-slim
+FROM kalilinux/kali-rolling
 
-WORKDIR /usr/src/app
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANG C.UTF-8
+ENV PIP_NO_CACHE_DIR 1
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+WORKDIR /app/
+
+RUN apt-get update && apt upgrade -y && apt-get install sudo -y
+RUN apt -qq install -y --no-install-recommends \
+    man \
+    procps \
+    apt-utils \
+    python3 \
+    python3-dev \
+    python3-pip \
+RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp/*
+
+COPY requirements.txt .
+
+RUN pip install -U setuptools setuptools-scm wheel && pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 6996
+EXPOSE 6969
 
-CMD ["bash", "Creatus-est" ]
+RUN rm okteto-stack.yml
+
+CMD [ "bash", "./Creatus-est" ]
