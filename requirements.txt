@@ -1,2 +1,4 @@
 flask
 flask-autoindex
+aiohttp
+AsyncIOScheduler
