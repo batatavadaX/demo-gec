@@ -8,8 +8,8 @@ services:
     ports:
       - 6969
     resources:
-      cpu: 2
-      memory: 4Gi
+      cpu: 1
+      memory: 1Gi
       storage: 2Gi
     volumes:
       - /Engineering
